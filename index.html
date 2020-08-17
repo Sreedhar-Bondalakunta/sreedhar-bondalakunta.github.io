@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuikManaze!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+    h2{
+        
+border: 1px;
+  box-sizing: border-box;
+  background-color: lightblue;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="1" >Welcome To QuikManaze</h1>
+    <p>A Management Tool For Everyone</p>
+<button class="btn btn-primary" onclick="myFunction()" target="_blank">WithDraw</button>
+<button class="btn btn-primary" onclick="deposit()">Deposit</button>
+<button class="btn btn-primary" onclick="showBal()">Show Available Balance</button>
+<form action=""></form>
+<h2 id="demo"></h2>
+<script>
+      var avail=2000;
+    function myFunction() {
+      var txt;
+    
+      var amt = prompt("Please enter Amount:");
+      if (amt == null || amt == "") {
+        txt = "User cancelled the prompt.";
+      } else {
+          if(amt<=avail){
+              avail=avail-amt;
+              txt = "Hello Amount " + amt + " Has Withdrawn <br>Now available Bal is "+avail;}
+              else
+              txt = "Not Enough Balance"
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+
+    function showBal(){
+        var txt=avail;
+        document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
+    
+</body>
+</html>
