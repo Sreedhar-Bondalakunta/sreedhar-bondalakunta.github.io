@@ -1,1 +1,1 @@
-# sreedhar-bondalakunta.github.io
+# guru.github.io
